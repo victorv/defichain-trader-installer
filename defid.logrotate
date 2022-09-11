@@ -1,0 +1,10 @@
+/var/log/defid/*.log {
+        daily
+        missingok
+        rotate 7
+        compress
+        notifempty
+        copytruncate
+        sharedscripts
+        endscript
+}
