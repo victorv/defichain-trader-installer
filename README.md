@@ -37,7 +37,7 @@ gpg:          There is no indication that the signature belongs to the owner.
 ```
 
 It is up to you to decide if you want to trust the key or read the WARNING every time.
-Either way you should be able to decrypt defid.tar.gz.gpg file.
+You should be able to decrypt defid.tar.gz.gpg either way.
 
 5. Now you can extract the compressed installer files with:
 ```shell
