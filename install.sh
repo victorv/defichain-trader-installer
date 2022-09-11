@@ -12,6 +12,8 @@ then
   exit 2
 fi
 
+systemctl stop defid
+
 adduser \
    --system \
    --shell /bin/false \
@@ -61,6 +63,6 @@ if ! grep -q defi-cli $HOME/.bashrc; then
   source .bashrc
 fi
 
-
+systemctl daemon-reload
 systemctl enable defid
 echo "You can now use systemctl to start your full node: systemctl start defid"
