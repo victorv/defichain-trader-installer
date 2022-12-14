@@ -40,14 +40,15 @@ chmod 0710 /etc/defi/
 mkdir data_directory
 mkdir /var/lib/defid
 
-wget "$SNAPSHOT_URL_EU" -P data_directory
-unzip "data_directory/$SNAPSHOT_NAME_EU"
+wget "$SNAPSHOT_URL_EU"
+unzip -q "$SNAPSHOT_NAME_EU" -d data_directory
 mv data_directory/anchors /var/lib/defid
 mv data_directory/blocks /var/lib/defid
 mv data_directory/chainstate /var/lib/defid
 mv data_directory/history /var/lib/defid
 mv data_directory/enhancedcs /var/lib/defid
 mv data_directory/indexes /var/lib/defid
+rm -rf "$SNAPSHOT_NAME_EU"
 rm -rf data_directory
 
 mkdir /var/lib/defid/wallets
